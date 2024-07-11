@@ -1,14 +1,20 @@
 syntax = "proto3";
 
+import "trx.entity.proto";
+
 message Request {
     oneof request {
-
+        SetMapEntity.Request setMapEntity = 1;
+        DeleteMapEntity.Request deleteMapEntity = 2;
+        GetAllMapEntities.Request getAllMapEntities = 3;
     }
 }
 
 message Response {
     oneof response {
-
+        SetMapEntity.Response setMapEntity = 1;
+        DeleteMapEntity.Response deleteMapEntity = 2;
+        GetAllMapEntities.Response getAllMapEntities = 3;
     }
 }
 
