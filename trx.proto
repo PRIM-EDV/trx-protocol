@@ -2,6 +2,7 @@ syntax = "proto3";
 
 import "trx.entity.proto";
 import "trx.squad.proto";
+import "trx.tracker.proto";
 
 message Request {
     oneof request {
@@ -13,6 +14,9 @@ message Request {
         SetSquad.Request setSquad = 4;
         DeleteSquad.Request deleteSquad = 5;
         GetAllSquads.Request getAllSquads = 6;
+
+        // Tracker
+        SetTracker.Request setTracker = 7;
     }
 }
 
@@ -26,6 +30,9 @@ message Response {
         SetSquad.Response setSquad = 4;
         DeleteSquad.Response deleteSquad = 5;
         GetAllSquads.Response getAllSquads = 6;
+
+        // Tracker
+        SetTracker.Response setTracker = 7;
     }
 }
 
