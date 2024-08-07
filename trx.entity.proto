@@ -7,12 +7,19 @@ enum MapEntityType {
     TYPE_OBJECT = 3;
 }
 
+enum MapEntityStatus {
+    ENTITY_STATUS_UNDEFINED = 0;
+    ENTITY_STATUS_REGULAR = 1;
+    ENTITY_STATUS_COMBAT = 2;
+}
+
 message MapEntity {
     message Squad {
         string name = 1;
         string callsign = 2;
         int32 trackerId = 3;
         int32 combattants = 4;
+        MapEntityStatus status = 5;
     }
 
     message Enemy {
