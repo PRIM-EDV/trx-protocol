@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+message GetBatteryStatus {
+    message Request { }
+
+    message Response {
+        int32 battery_level = 1;
+    }
+
+    oneof message {
+        Request request = 1;
+        Response response = 2;
+        string error = 3;
+    }
+}
+
+message GetDeviceInfo {
+    message Request { }
+
+    message Response {
+        string device_id = 1;
+        string fw_version = 2;
+    }
+
+    oneof message {
+        Request request = 1;
+        Response response = 2;
+        string error = 3;
+    }
+}
