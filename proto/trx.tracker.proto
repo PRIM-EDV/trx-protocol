@@ -10,6 +10,7 @@ message Entity {
   int32 id = 1;
   Position position = 2;
   Type type = 3;
+  int32 size = 4;
 }
 
 message Position {

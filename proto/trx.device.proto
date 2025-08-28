@@ -5,6 +5,7 @@ message GetBatteryStatus {
 
     message Response {
         int32 battery_level = 1;
+        bool isCharging = 2;
     }
 
     oneof message {
